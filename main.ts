@@ -51,15 +51,16 @@ interface  Course {
         return;
       }
       this.balance -= amount;
-      console.log(chalk.red.bold(`\nPayment of ${amount} received. Remaining balance: ${this.balance}`));
+      console.log(chalk.yellow.bold(`\nPayment of ${amount} received. Remaining balance: ${this.balance}`));
     }
   
     public showStatus(): void {
       console.log(chalk.green.bold(`Student Name: ${this.name}`));
       console.log(chalk.blue.bold (`Student ID: ${this.id}`));
-      console.log(chalk.yellow.bold("Enrolled Courses:"));
-      this.courses.forEach(course => console.log(`  - ${course.name}`));
-      console.log(chalk.yellow.bold(`Balance: ${this.balance}`));
+      console.log(chalk.green.bold("Enrolled Courses:"));
+      this.courses.forEach(course => console.log(chalk.blue.bold(`  - ${course.name}`)));
+                                                            
+      console.log(chalk.y.bold.red(`Balance: ${this.balance}`));
     }
   }
   
