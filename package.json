@@ -1,6 +1,6 @@
 {
   "name": "wa0_student_management_system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a student management system project.",
   "main": "index.js",
   "type": "module",

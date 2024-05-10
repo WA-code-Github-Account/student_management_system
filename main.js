@@ -1,9 +1,11 @@
-import chalk from "chalk";
+#! /usr/bin/env node
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const chalk_1 = __importDefault(require("chalk"));
 class Student {
-    name;
-    id;
-    courses;
-    balance;
     constructor(name) {
         this.name = name;
         this.id = this.generateUniqueID();
@@ -37,14 +39,14 @@ class Student {
             return;
         }
         this.balance -= amount;
-        console.log(chalk.red.bold(`\nPayment of ${amount} received. Remaining balance: ${this.balance}`));
+        console.log(chalk_1.default.yellow.bold(`\nPayment of ${amount} received. Remaining balance: ${this.balance}`));
     }
     showStatus() {
-        console.log(chalk.green.bold(`Student Name: ${this.name}`));
-        console.log(chalk.blue.bold(`Student ID: ${this.id}`));
-        console.log(chalk.yellow.bold("Enrolled Courses:"));
-        this.courses.forEach(course => console.log(`  - ${course.name}`));
-        console.log(chalk.yellow.bold(`Balance: ${this.balance}`));
+        console.log(chalk_1.default.green.bold(`Student Name: ${this.name}`));
+        console.log(chalk_1.default.blue.bold(`Student ID: ${this.id}`));
+        console.log(chalk_1.default.green.bold("Enrolled Courses:"));
+        this.courses.forEach(course => console.log(chalk_1.default.blue.bold(`  - ${course.name}`)));
+        console.log(chalk_1.default.red.bold(`Balance: ${this.balance}`));
     }
 }
 // Example usage
