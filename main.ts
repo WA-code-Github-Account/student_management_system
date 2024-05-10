@@ -59,7 +59,12 @@ interface  Course {
       console.log(chalk.blue.bold (`Student ID: ${this.id}`));
       console.log(chalk.green.bold("Enrolled Courses:"));
       this.courses.forEach(course => console.log(chalk.blue.bold(`  - ${course.name}`)));
+<<<<<<< HEAD
       console.log(chalk.red.bold(`Balance: ${this.balance}`));
+=======
+                                                            
+      console.log(chalk.y.bold.red(`Balance: ${this.balance}`));
+>>>>>>> f40ad1d69e4582f05e2c48273b03bf6f6c5fbd0d
     }
   }
   
